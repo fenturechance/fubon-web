@@ -1,7 +1,13 @@
 <template>
-  <p>234</p>
+  <Navigation />
 </template>
-<script setup>
+<script>
+import Navigation from '@/components/Navigation.vue'
+export default {
+  components: {
+    Navigation
+  }
+}
 </script>
 <style>
 </style>
