@@ -1,10 +1,10 @@
 <template>
-  <nav class="flex spa justify-between pt-4 max-w-7xl m-auto items-center">
-    <h1 class="text-4xl">{{ title }}</h1>
-    <ul class="flex gap-8 text-lg">
+  <nav class="flex spa justify-between pt-4 items-center max-wrapper">
+    <h1 class="text-4xl text-white">{{ title }}</h1>
+    <ul class="flex gap-8 text-lg text-white">
       <li v-for="item in navigationList" :key="item.id">{{ item.title }}</li>
     </ul>
-    <button class="text-lg ring-1 px-8 py-1 rounded-3xl ring-white">{{ $t('signUp') }}</button>
+    <button class="text-lg ring-1 px-8 py-1 rounded-3xl ring-white text-white">{{ $t('signUp') }}</button>
   </nav>
 </template>
 <script setup>
