@@ -59,7 +59,7 @@
     <footer class="bg-sky-800 sm:h-72">
       <div class="sm:flex max-wrapper h-full items-center justify-between py-12 sm:py-0">
         <div>
-          <h2 class="text-white text-5xl mb-8">{{ $t('title') }}</h2>
+          <h2 class="text-white text-5xl mb-8 font-semibold">{{ $t('title') }}</h2>
           <ul class="sm:flex gap-7">
             <li v-for="contactMethod in contactMethodArr" :key="contactMethod.id" class="flex">
               <img :src="contactMethod.image" :alt="contactMethod.id" class="w-4">

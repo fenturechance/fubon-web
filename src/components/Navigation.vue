@@ -1,6 +1,6 @@
 <template>
-  <nav class="flex spa justify-between pt-8 items-center max-wrapper">
-    <h1 class="text-4xl text-white">{{ title }}</h1>
+  <nav class="flex spa justify-between pt-4 items-center max-wrapper">
+    <h1 class="text-4xl text-white font-semibold">{{ title }}</h1>
     <ul class="gap-8 text-lg text-white none hidden sm:flex">
       <li v-for="item in navigationList" :key="item.id">{{ item.title }}</li>
     </ul>
