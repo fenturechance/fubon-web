@@ -1,7 +1,9 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [],
   purge: [ './src/**/*.html', './src/**/*.vue', './src/**/*.jsx', ],
   theme: {
+    ...defaultTheme,
     colors: {
       sky: {
         800: '#2C4664',

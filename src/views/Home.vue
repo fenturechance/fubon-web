@@ -10,8 +10,8 @@
             <img :src="icon.image" :alt="icon.id">
           </li>
         </ul>
-        <ul class="sm:flex bg-sky-800 rounded-xl sm:divide-x divide-sky-900 relative divide-y sm:divide-y-0 shadow-lg z-10">
-          <li v-for="dateSelector in dateSelectorArr" class="px-10 py-6 sm:w-1/4 w-full" :key="dateSelector.title">
+        <ul class="lg:flex-nowrap md:flex md:flex-wrap bg-sky-800 rounded-xl md:divide-x divide-sky-900 relative divide-y md:divide-y-0 shadow-lg z-10">
+          <li v-for="dateSelector in dateSelectorArr" class="px-10 py-6 lg:w-1/4 md:w-1/2 w-full" :key="dateSelector.title">
             <p class="gray-title">{{ dateSelector.title }}</p>
             <div class="flex">
               <p class="text-white text-5xl mr-3 tracking-widest font-semibold">{{ dateSelector.date }}</p>
@@ -22,8 +22,8 @@
               <img :src="buttonOnlyDropDown" alt="dropdown">
             </div>
           </li>
-          <li v-for="(guestType, index) in guestTypeArr" class="py-6 px-10 sm:w-1/8 inline-flex flex-col xs:w-1/2 border-sky-900" :key="guestType.title" :class="{ 'border-r-2': index === 0 }">
-            <p class="gray-title text-center sm:text-left">{{ guestType.title }}</p>
+          <li v-for="(guestType, index) in guestTypeArr" class="py-6 px-10 lg:w-1/8 xs:w-1/2 inline-flex flex-col border-sky-900" :key="guestType.title" :class="{ 'border-r-2': index === 0 }">
+            <p class="gray-title text-center sm:text-left md:text-center">{{ guestType.title }}</p>
             <div class="flex justify-center">
               <img :src="buttonMinus">
               <p class="text-white text-5xl px-2 font-semibold">{{ guestType.amount }}</p>
@@ -38,9 +38,9 @@
         <div class="bg-cyan-200 h-60 sm:hidden absolute bottom-0 w-full left-0 z-0"></div>
       </div>
     </section>
-    <section class="bg-cyan-200 sm:h-screen h-auto overflow-hidden sm:pt-0">
+    <section class="bg-cyan-200 sm:h-screen sm:min-h-[50rem] h-auto overflow-hidden sm:pt-0">
       <div class="sm:flex h-full max-wrapper sm:items-center sm:mt-0 mb-32 sm:mb-0">
-        <div class="sm:w-1/2 pt-20">
+        <div class="sm:w-1/2 pt-32">
           <h2 class="title-size sm:text-5xl text-4xl">{{ $t('luxuryPlaza') }}</h2>
           <h2 class="title-size sm:text-5xl text-4xl">{{ $t('HotelForYou') }}</h2>
           <p class="text-gray-300 sm:text-base mb-8 mt-8 max-w-sm text-lg">{{ $t('distantOrbHasPowerToRaiseAndPurifyOurThoughtsLikeAStrainOfSacredMusic') }}</p>
