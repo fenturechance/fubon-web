@@ -37,8 +37,8 @@
         </ul>
       </div>
     </section>
-    <section class="bg-cyan-200 sm:h-screen h-auto overflow-hidden pt-[20vh]">
-      <div class="sm:flex max-wrapper items-center mt-20 sm:mt-0 mb-8 sm:mb-0">
+    <section class="bg-cyan-200 sm:h-screen h-auto overflow-hidden pt-[20vh] sm:pt-0">
+      <div class="sm:flex h-full max-wrapper sm:items-center mt-32 sm:mt-0 mb-32 sm:mb-0">
         <div class="sm:w-1/2 pt-20">
           <h2 class="title-size sm:text-5xl text-4xl">{{ $t('luxuryPlaza') }}</h2>
           <h2 class="title-size sm:text-5xl text-4xl">{{ $t('HotelForYou') }}</h2>
