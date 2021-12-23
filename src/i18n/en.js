@@ -15,4 +15,12 @@ export const en = {
   adults: 'ADULTS',
   children: 'CHILDREN',
   checkAvailability: 'CHECK AVAILABILITY',
+  luxuryPlaza: 'Luxury Plaza',
+  HotelForYou: 'Hotel for You',
+  distantOrbHasPowerToRaiseAndPurifyOurThoughtsLikeAStrainOfSacredMusic: 'Distant orb has power to raise and purify our thoughts like a strain of sacred music.',
+  aboutUs: 'ABOUT US',
+  playVideo: 'Play video',
+  subscribe: 'Subscribe',
+  email: 'Email',
+  noSpamOnlyProfit: 'No spam. Only profit.',
 }

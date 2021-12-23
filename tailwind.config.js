@@ -13,6 +13,14 @@ module.exports = {
       white: '#ffffff',
       lime: {
         300: '#C8FF8C'
+      },
+      cyan: {
+        200: '#EDF1F5'
+      },
+      gray: {
+        200: '#b2b4b7',
+        300: '#909294',
+        500: '#96a3b2',
       }
     },
     extend: {},

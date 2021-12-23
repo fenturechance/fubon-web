@@ -1,15 +1,17 @@
 <template>
-  <nav class="flex spa justify-between pt-4 items-center max-wrapper">
+  <nav class="flex spa justify-between pt-8 items-center max-wrapper">
     <h1 class="text-4xl text-white">{{ title }}</h1>
-    <ul class="flex gap-8 text-lg text-white">
+    <ul class="gap-8 text-lg text-white none hidden sm:flex">
       <li v-for="item in navigationList" :key="item.id">{{ item.title }}</li>
     </ul>
-    <button class="text-lg ring-1 px-8 py-1 rounded-3xl ring-white text-white">{{ $t('signUp') }}</button>
+    <button class="btn-size ring-white text-white">{{ $t('signUp') }}</button>
+    <img :src="buttonMenu" alt="menu" class="sm:hidden">
   </nav>
 </template>
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import button_menu from '@/assets/images/button_menu.svg'
 const { t } = useI18n()
 const title = ref(t('title'))
 const navigationList = ref([
@@ -19,6 +21,7 @@ const navigationList = ref([
   { id: 'blog', title: t('menu.blog') },
   { id: 'contact', title: t('menu.contact') },
 ])
+const buttonMenu = ref(button_menu)
 </script>
 <script>
 export default {
