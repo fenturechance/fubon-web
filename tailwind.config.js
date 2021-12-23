@@ -25,7 +25,11 @@ module.exports = {
         500: '#96a3b2',
       }
     },
-    extend: {},
+    extend: {
+      width: {
+        '1/8': '12.5%'
+      }
+    },
   },
   plugins: [],
 }

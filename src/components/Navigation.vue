@@ -1,11 +1,13 @@
 <template>
   <nav class="flex spa justify-between pt-4 items-center max-wrapper">
     <h1 class="text-4xl text-white font-semibold">{{ title }}</h1>
-    <ul class="gap-8 text-lg text-white none hidden sm:flex">
-      <li v-for="item in navigationList" :key="item.id">{{ item.title }}</li>
+    <ul class="lg:gap-8 text-lg text-white none hidden lg:flex">
+      <li v-for="item in navigationList" :key="item.id" class="cursor-pointer">{{ item.title }}</li>
     </ul>
-    <button class="btn-size ring-white text-white ring-opacity-30 whitespace-nowrap">{{ $t('signUp') }}</button>
-    <img :src="buttonMenu" alt="menu" class="sm:hidden">
+    <div class="flex sm:gap-4 gap-2">
+      <button class="btn-size ring-white text-white ring-opacity-30 whitespace-nowrap">{{ $t('signUp') }}</button>
+      <img :src="buttonMenu" alt="menu" class="lg:hidden">
+    </div>
   </nav>
 </template>
 <script setup>

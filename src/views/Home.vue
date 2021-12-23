@@ -10,20 +10,20 @@
             <img :src="icon.image" :alt="icon.id">
           </li>
         </ul>
-        <ul class="lg:flex-nowrap md:flex md:flex-wrap bg-sky-800 rounded-xl md:divide-x divide-sky-900 relative divide-y md:divide-y-0 shadow-lg z-10">
-          <li v-for="dateSelector in dateSelectorArr" class="px-10 py-6 lg:w-1/4 md:w-1/2 w-full" :key="dateSelector.title">
+        <ul class="lg:flex-nowrap sm:flex sm:flex-wrap bg-sky-800 rounded-xl relative shadow-lg z-10">
+          <li v-for="(dateSelector, index) in dateSelectorArr" class="px-10 py-6 lg:w-1/4 sm:w-1/2 w-full list-item-border" :key="dateSelector.title" :class="{ 'sm:border-r': index === 0}">
             <p class="gray-title">{{ dateSelector.title }}</p>
             <div class="flex">
               <p class="text-white text-5xl mr-3 tracking-widest font-semibold">{{ dateSelector.date }}</p>
               <div class="mr-3">
                 <p class="text-white">{{ `${dateSelector.month}, ${dateSelector.year}` }}</p>
-                <p class="text-slate-50 text-sm">{{ dateSelector.day }}</p>
+                <p class="text-slate-50 text-xs">{{ dateSelector.day }}</p>
               </div>
               <img :src="buttonOnlyDropDown" alt="dropdown">
             </div>
           </li>
-          <li v-for="(guestType, index) in guestTypeArr" class="py-6 px-10 lg:w-1/8 xs:w-1/2 inline-flex flex-col border-sky-900" :key="guestType.title" :class="{ 'border-r-2': index === 0 }">
-            <p class="gray-title text-center sm:text-left md:text-center">{{ guestType.title }}</p>
+          <li v-for="(guestType, index) in guestTypeArr" class="py-6 px-10 lg:w-1/8 sm:w-1/4 xs:w-1/2 inline-flex flex-col list-item-border sm:border-r" :key="guestType.title" :class="{ 'border-r': index === 0,  }">
+            <p class="gray-title text-center sm:text-left md:text-center text-sm">{{ guestType.title }}</p>
             <div class="flex justify-center">
               <img :src="buttonMinus">
               <p class="text-white text-5xl px-2 font-semibold">{{ guestType.amount }}</p>
@@ -35,18 +35,18 @@
           </li>
           <button class="absolute w-[48px] h-[48px] bg-contain bg-no-repeat left-1/2 transform -translate-x-1/2 -bottom-[24px] border-none shadow-lg rounded-full" :style="{ backgroundImage: `url('${buttonDropDown}')` }"></button>
         </ul>
-        <div class="bg-cyan-200 h-60 sm:hidden absolute bottom-0 w-full left-0 z-0"></div>
+        <div class="bg-cyan-200 h-60 sm:hidden absolute -bottom-1 w-full left-0 z-0"></div>
       </div>
     </section>
-    <section class="bg-cyan-200 sm:h-screen sm:min-h-[50rem] h-auto overflow-hidden sm:pt-0">
-      <div class="sm:flex h-full max-wrapper sm:items-center sm:mt-0 mb-32 sm:mb-0">
-        <div class="sm:w-1/2 pt-32">
-          <h2 class="title-size sm:text-5xl text-4xl">{{ $t('luxuryPlaza') }}</h2>
-          <h2 class="title-size sm:text-5xl text-4xl">{{ $t('HotelForYou') }}</h2>
-          <p class="text-gray-300 sm:text-base mb-8 mt-8 max-w-sm text-lg">{{ $t('distantOrbHasPowerToRaiseAndPurifyOurThoughtsLikeAStrainOfSacredMusic') }}</p>
+    <section class="bg-cyan-200 md:h-screen md:min-h-[50rem] h-auto overflow-hidden md:pt-0">
+      <div class="md:flex h-full max-wrapper md:items-center md:mt-0 mb-32 md:mb-0">
+        <div class="md:w-1/2 pt-32">
+          <h2 class="title-size md:text-5xl text-4xl mb-4">{{ $t('luxuryPlaza') }}</h2>
+          <h2 class="title-size md:text-5xl text-4xl">{{ $t('HotelForYou') }}</h2>
+          <p class="text-gray-300 md:text-base mb-8 mt-8 max-w-sm text-lg">{{ $t('distantOrbHasPowerToRaiseAndPurifyOurThoughtsLikeAStrainOfSacredMusic') }}</p>
           <button class="btn-size ring-gray-200">{{ $t('aboutUs') }}</button>
         </div>
-        <div :style="{ backgroundImage: `url('${imageItem}')`}" class="bg-center w-full sm:w-1/2 bg-no-repeat sm:pt-[49%] pt-[150%] relative bg-cover rounded-3xl overflow-hidden shadow-2xl mt-20 sm:mt-0">
+        <div :style="{ backgroundImage: `url('${imageItem}')`}" class="bg-center w-full md:w-1/2 bg-no-repeat md:pt-[49%] pt-[150%] relative bg-cover rounded-3xl overflow-hidden shadow-2xl mt-20 md:mt-0">
           <div class="bg-white absolute bottom-0 w-full px-6 py-8 flex items-center">
             <button :style="{ backgroundImage: `url('${buttonPlayer}')` }" class="w-[80px] h-[80px] bg-no-repeat"></button>
             <div class="ml-4">
@@ -57,19 +57,19 @@
         </div>
       </div>
     </section>
-    <footer class="bg-sky-800 sm:h-72">
-      <div class="sm:flex max-wrapper h-full items-center justify-between py-12 sm:py-0">
+    <footer class="bg-sky-800 lg:h-72">
+      <div class="lg:flex max-wrapper h-full items-center justify-between py-12 lg:py-0">
         <div>
           <h2 class="text-white text-5xl mb-8 font-semibold">{{ $t('title') }}</h2>
-          <ul class="sm:flex gap-7">
-            <li v-for="contactMethod in contactMethodArr" :key="contactMethod.id" class="flex">
+          <ul class="lg:flex gap-7">
+            <li v-for="contactMethod in contactMethodArr" :key="contactMethod.id" class="flex mb-2">
               <img :src="contactMethod.image" :alt="contactMethod.id" class="w-4">
               <p :class="contactMethod.color" class="ml-3">{{ contactMethod.text }}</p>
             </li>
           </ul>
         </div>
         <div>
-          <p class="text-white text-2xl mb-2 mt-8 sm:mt-0">{{ $t('subscribe') }}</p>
+          <p class="text-white text-2xl mb-2 mt-8 lg:mt-0">{{ $t('subscribe') }}</p>
           <input type="text" :placeholder="$t('email')" class="px-4 py-2 min-w-[274px] border-gray-300 w-full">
           <p class="text-gray-500 text-sm mt-2">{{ $t('noSpamOnlyProfit') }}</p>
         </div>
@@ -149,5 +149,8 @@ export default {
 }
 .title-size {
   @apply font-semibold tracking-wider;
+}
+.list-item-border {
+  @apply border-sky-900 lg:border-r border-b;
 }
 </style>
