@@ -4,7 +4,7 @@
     <ul class="gap-8 text-lg text-white none hidden sm:flex">
       <li v-for="item in navigationList" :key="item.id">{{ item.title }}</li>
     </ul>
-    <button class="btn-size ring-white text-white ring-opacity-30">{{ $t('signUp') }}</button>
+    <button class="btn-size ring-white text-white ring-opacity-30 whitespace-nowrap">{{ $t('signUp') }}</button>
     <img :src="buttonMenu" alt="menu" class="sm:hidden">
   </nav>
 </template>

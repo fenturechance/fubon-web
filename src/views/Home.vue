@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="main bg-no-repeat bg-cover sm:pb-20 h-[120vh] sm:h-auto" :style="{ backgroundImage: `url('${imageBackground}')` }">
+    <section class="main bg-no-repeat bg-cover sm:pb-20 sm:h-auto relative" :style="{ backgroundImage: `url('${imageBackground}')` }">
       <Navigation />
       <div class="mt-12 sm:mt-32 max-wrapper">
         <h2 class="text-white w-8 mb-4 title-size sm:text-6xl text-5xl">{{ $t('exclusiveBoutiqueHotel') }}</h2>
@@ -10,7 +10,7 @@
             <img :src="icon.image" :alt="icon.id">
           </li>
         </ul>
-        <ul class="sm:flex bg-sky-800 rounded-xl sm:divide-x divide-sky-900 relative divide-y sm:divide-y-0 shadow-lg">
+        <ul class="sm:flex bg-sky-800 rounded-xl sm:divide-x divide-sky-900 relative divide-y sm:divide-y-0 shadow-lg z-10">
           <li v-for="dateSelector in dateSelectorArr" class="px-10 py-6 sm:w-1/4 w-full" :key="dateSelector.title">
             <p class="gray-title">{{ dateSelector.title }}</p>
             <div class="flex">
@@ -35,10 +35,11 @@
           </li>
           <button class="absolute w-[48px] h-[48px] bg-contain bg-no-repeat left-1/2 transform -translate-x-1/2 -bottom-[24px] border-none shadow-lg rounded-full" :style="{ backgroundImage: `url('${buttonDropDown}')` }"></button>
         </ul>
+        <div class="bg-cyan-200 h-60 sm:hidden absolute bottom-0 w-full left-0 z-0"></div>
       </div>
     </section>
-    <section class="bg-cyan-200 sm:h-screen h-auto overflow-hidden pt-[20vh] sm:pt-0">
-      <div class="sm:flex h-full max-wrapper sm:items-center mt-32 sm:mt-0 mb-32 sm:mb-0">
+    <section class="bg-cyan-200 sm:h-screen h-auto overflow-hidden sm:pt-0">
+      <div class="sm:flex h-full max-wrapper sm:items-center sm:mt-0 mb-32 sm:mb-0">
         <div class="sm:w-1/2 pt-20">
           <h2 class="title-size sm:text-5xl text-4xl">{{ $t('luxuryPlaza') }}</h2>
           <h2 class="title-size sm:text-5xl text-4xl">{{ $t('HotelForYou') }}</h2>
